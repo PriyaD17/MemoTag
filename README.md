@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## MemoTag – AI for Dementia Care
 
-First, run the development server:
+A Tier-1, fully responsive, animated, and conversion-focused one-page website for **MemoTag**, an AI-powered dementia care platform. Built using **Next.js**, **Tailwind CSS**, **Framer Motion**, and **Supabase**.
+
+---
+
+### 🔗 Live Demo  
+[👉 View Live on Vercel](https://your-vercel-app-link.vercel.app)
+
+---
+
+### ✨ Features
+
+- 🧠 **Beautiful Hero Section** with Lottie animation and Shark Tank badge
+- 📊 **Problem & Traction Sections** with compelling data and visuals
+- 🧩 **Solution Section** with step-based feature highlights
+- 📥 **Waitlist Form** integrated with Supabase PostgreSQL
+- 🎞️ **Framer Motion Animations** for smooth scrolls and transitions
+- 🧭 **Sticky Navbar**, **Animated Partner Logos**, **Back-to-Top Button**
+- 📱 **Mobile Responsive** – fully optimized for all devices
+
+---
+
+### 🛠️ Tech Stack
+
+| Layer       | Stack                                     |
+|------------|--------------------------------------------|
+| Frontend    | [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), [Framer Motion](https://www.framer.com/motion/), [Lottie](https://lottiefiles.com) |
+| Backend     | [Supabase](https://supabase.io) (PostgreSQL + API) |
+| Deployment  | [Vercel](https://vercel.com) |
+
+---
+
+### 📂 Folder Structure
+
+```
+📁 /sections
+  ├─ Hero.tsx
+  ├─ ProblemSection.tsx
+  ├─ Solution.tsx
+  ├─ Traction.tsx
+  ├─ CTA.tsx
+  ├─ Navbar.tsx
+  ├─ Footer.tsx
+  └─ BackToTop.tsx
+
+  📁 /componenets
+  ├─ /hero_ani    #hero section animation
+  ├─ Navbar.tsx
+  └─ Footer.tsx
+
+📁 /lib
+  └─ waitlist.ts       # Supabase config
+
+📁 /public
+  ├─ STLogo.svg 
+  ├─/icons      
+  └─ /traction
+
+
+📁 /app
+  └─ page.tsx
+
+📁 /styles
+  └─ globals.css
+```
+
+---
+
+### 🚀 Getting Started
+
+#### 1. Clone the repo
+```bash
+git clone https://github.com/PriyaD17/MemoTag.git
+cd memotag-site
+```
+
+#### 2. Install dependencies
+```bash
+npm install
+```
+
+#### 3. Set up Supabase
+
+- Go to [supabase.io](https://supabase.io)
+- Create a new project
+- Create a table `Waitlist` with a column `email` (type: text)
+- Copy your Project URL and Anon Key
+
+#### 4. Configure Supabase
+
+Create `.env.local`:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+```
+
+#### 5. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 📬 Supabase Table Schema
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sql
+create table Waitlist (
+  id uuid primary key default uuid_generate_v4(),
+  email text not null,
+  created_at timestamp with time zone default timezone('utc', now())
+);
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 📤 Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Deploy using **Vercel**:
 
-## Deploy on Vercel
+```bash
+npx vercel
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
