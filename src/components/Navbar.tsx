@@ -1,14 +1,14 @@
 'use client';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+
 
 export default function Navbar() {
-  const [isDark, setIsDark] = useState(false);
+//   const [isDark, setIsDark] = useState(false);
 
-  useEffect(() => {
-    console.log('Dark mode:', isDark); // Debugging
-    document.documentElement.classList.toggle('dark', isDark);
-  }, [isDark]);
+//   useEffect(() => {
+//     console.log('Dark mode:', isDark); // Debugging
+//     document.documentElement.classList.toggle('dark', isDark);
+//   }, [isDark]);
 
   return (
     <header className="w-full bg-white dark:bg-gray-900 shadow-md fixed top-0 z-50 transition-colors duration-300">
