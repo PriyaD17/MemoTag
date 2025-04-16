@@ -5,7 +5,7 @@ import { BarChart3, AlertTriangle, Stethoscope } from 'lucide-react';
 
 export default function Problem() {
   return (
-    <section className="w-full dark:bg-gray-900 text-gray-900 dark:text-whitebg-white py-20 px-6">
+    <section className="w-full bg-blue-50 dark:bg-gray-900 text-gray-900 dark:text-whitebg-white py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         
         {/* Section Title */}
