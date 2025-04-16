@@ -1,7 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Lottie from 'lottie-react';
+import dynamic from "next/dynamic";
+const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false });
+// import Lottie from 'lottie-react';
 import animationData from '@/components/hero_ani/ai-health.json';
 
 export default function Hero() {
@@ -57,12 +59,14 @@ export default function Hero() {
           initial={{ scale: 0.95, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
+    
         >
-          <Lottie
+            
+          { <DynamicLottie
             animationData={animationData}
             loop
             className="w-full max-w-xs sm:max-w-sm md:max-w-md"
-          />
+          /> }
         </motion.div>
 
          {/* Shark Tank Logo */}
