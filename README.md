@@ -6,18 +6,19 @@ A Tier-1, fully responsive, animated, and conversion-focused one-page website fo
 ---
 
 ### 🔗 Live Demo  
-[👉 View Live on Vercel](https://your-vercel-app-link.vercel.app)
+[👉 View Live on Vercel](https://memo-tag-umber.vercel.app/)
 
 ---
 
 ### ✨ Features
 
-- 🧠 **Beautiful Hero Section** with Lottie animation and Shark Tank badge
+- 🧠 **Beautiful Hero Section** with Lottie animation
 - 📊 **Problem & Traction Sections** with compelling data and visuals
 - 🧩 **Solution Section** with step-based feature highlights
 - 📥 **Waitlist Form** integrated with Supabase PostgreSQL
 - 🎞️ **Framer Motion Animations** for smooth scrolls and transitions
 - 🧭 **Sticky Navbar**, **Animated Partner Logos**, **Back-to-Top Button**
+- 💎 **ShadCN UI Components** – Accessible, customizable components styled with Tailwind CSS
 - 📱 **Mobile Responsive** – fully optimized for all devices
 
 ---
@@ -26,7 +27,7 @@ A Tier-1, fully responsive, animated, and conversion-focused one-page website fo
 
 | Layer       | Stack                                     |
 |------------|--------------------------------------------|
-| Frontend    | [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com), [Framer Motion](https://www.framer.com/motion/), [Lottie](https://lottiefiles.com) |
+| Frontend    | [Next.js](https://nextjs.org), [Tailwind CSS](https://tailwindcss.com),[ShadCN UI](https://ui.shadcn.com/),[Framer Motion](https://www.framer.com/motion/), [Lottie](https://lottiefiles.com) |
 | Backend     | [Supabase](https://supabase.io) (PostgreSQL + API) |
 | Deployment  | [Vercel](https://vercel.com) |
 
@@ -46,7 +47,8 @@ A Tier-1, fully responsive, animated, and conversion-focused one-page website fo
   └─ BackToTop.tsx
 
   📁 /componenets
-  ├─ /hero_ani    #hero section animation
+  ├─ /ui          # ShadCN UI components
+  ├─ /hero_ani    # hero section animation
   ├─ Navbar.tsx
   └─ Footer.tsx
 
