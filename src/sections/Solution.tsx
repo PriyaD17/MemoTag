@@ -5,7 +5,7 @@ import { Activity, BrainCircuit, Bell } from 'lucide-react';
 
 export default function Solution() {
   return (
-    <section id="solution" className="bg-blue-50 dark:bg-gray-900 text-gray-900 dark:text-white py-20 px-6">
+    <section id="solution" className=" text-gray-900 dark:text-white py-20 px-6">
 
       <div className="max-w-6xl mx-auto text-center">
         {/* Section Header */}

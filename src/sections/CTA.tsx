@@ -10,18 +10,18 @@ export default function CTA() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const { error } = await supabase.from('waitlist').insert([{ email }]);
-  
-    if (error) {
-      console.error(error);
-      alert('Something went wrong.');
-      return;
-    }
-  
-    setSubmitted(true);
-    setEmail('');
-  };
-  
+      const { error } = await supabase.from('waitlist').insert([{ email }]);
+
+      if (error) {
+        console.error(error);
+        alert('Something went wrong.');
+        return;
+      }
+
+      setSubmitted(true);
+      setEmail('');
+      };
+
   return (
     <section id="cta" className="bg-blue-50 dark:bg-gray-900 text-gray-900 dark:text-white py-20 px-6">
       <div className="max-w-3xl mx-auto text-center">
@@ -61,7 +61,12 @@ export default function CTA() {
           />
           <button
             type="submit"
-            className="px-6 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition font-medium"
+            className={`px-6 py-3 rounded-xl font-medium transition ${
+              submitted
+                ? 'bg-green-600 text-white cursor-not-allowed'
+                : 'bg-blue-600 text-white hover:bg-blue-700'
+            }`}
+            disabled={submitted}
           >
             {submitted ? 'Submitted ✅' : 'Join Waitlist'}
           </button>
