@@ -1,6 +1,8 @@
 
 ## MemoTag – AI for Dementia Care
 
+<video src="public/MemoTagvid - frontend.mp4" width="600" autoplay loop muted></video>
+
 A Tier-1, fully responsive, animated, and conversion-focused one-page website for **MemoTag**, an AI-powered dementia care platform. Built using **Next.js**, **Tailwind CSS**, **Framer Motion**, and **Supabase**.
 
 ---
